@@ -1,4 +1,5 @@
 language: objective-c
+xcode_workspace: Example/SensoriadaExample.xcworkspace
 
 before_install:
   - brew update
@@ -6,7 +7,7 @@ before_install:
   - sudo easy_install cpp-coveralls
 
 script:
-  - xctool test -project SensoriadaExample.xcodeproj -scheme SensoriadaExample -sdk iphonesimulator8.1 -destination "platform=iOS Simulator,name=iPhone 6,OS=8.1"
+  - xctool test -workspace SensoriadaExample.xcworkspace -scheme SensoriadaExample -sdk iphonesimulator8.1 -destination "platform=iOS Simulator,name=iPhone 6,OS=8.1"
 
 after_success: 
-  ./coveralls.rb --exclude-folder SensoriadaExample/Classes/GUI --exclude-folder SensoriadaExampleTests
+  ./coveralls.rb --exclude-folder SensoriadaExample/Classes/GUI --exclude-folder SensoriadaExampleTests --exclude-folder Pods
