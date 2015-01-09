@@ -1,5 +1,5 @@
 //
-//  SSAppDelegate.swift
+//  SRAppDelegate.swift
 //  SensoriadaExample
 //
 //  Created by bogdan on 09/01/15.
@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class SSAppDelegate: UIResponder, UIApplicationDelegate {
+class SRAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 

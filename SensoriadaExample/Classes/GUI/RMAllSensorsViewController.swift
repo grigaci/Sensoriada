@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SRAllSensorsViewController.swift
 //  SensoriadaExample
 //
 //  Created by bogdan on 09/01/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SRAllSensorsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
