@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SRAllSensorsViewController: UIViewController {
+class SRAllSensorsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
