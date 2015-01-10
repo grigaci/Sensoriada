@@ -13,6 +13,11 @@
 		438F24E41A607C8800774D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F24DD1A607C8800774D37 /* Main.storyboard */; };
 		438F24E51A607C8800774D37 /* RMAllSensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F24DE1A607C8800774D37 /* RMAllSensorsViewController.swift */; };
 		438F24E61A607C8800774D37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438F24E11A607C8800774D37 /* Images.xcassets */; };
+		438F24F31A61277000774D37 /* Sensoriada.h in Headers */ = {isa = PBXBuildFile; fileRef = 438F24F21A61277000774D37 /* Sensoriada.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		438F24F91A61277000774D37 /* Sensoriada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; };
+		438F25021A61277000774D37 /* SensoriadaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F25011A61277000774D37 /* SensoriadaTests.swift */; };
+		438F25051A61277000774D37 /* Sensoriada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; };
+		438F25061A61277000774D37 /* Sensoriada.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E667BD719DCD1704133074A8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7C6633293A15D9774FD29 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -24,7 +29,42 @@
 			remoteGlobalIDString = 438F24B21A607C4100774D37;
 			remoteInfo = SensoriadaExample;
 		};
+		438F24FA1A61277000774D37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 438F24AB1A607C4100774D37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 438F24ED1A61276F00774D37;
+			remoteInfo = Sensoriada;
+		};
+		438F24FC1A61277000774D37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 438F24AB1A607C4100774D37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 438F24B21A607C4100774D37;
+			remoteInfo = SensoriadaExample;
+		};
+		438F25031A61277000774D37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 438F24AB1A607C4100774D37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 438F24ED1A61276F00774D37;
+			remoteInfo = Sensoriada;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		438F250A1A61277000774D37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				438F25061A61277000774D37 /* Sensoriada.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		438F24B31A607C4100774D37 /* SensoriadaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensoriadaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +77,12 @@
 		438F24DE1A607C8800774D37 /* RMAllSensorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMAllSensorsViewController.swift; sourceTree = "<group>"; };
 		438F24E11A607C8800774D37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		438F24E81A607C9200774D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438F24EE1A61276F00774D37 /* Sensoriada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sensoriada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		438F24F11A61276F00774D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438F24F21A61277000774D37 /* Sensoriada.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sensoriada.h; sourceTree = "<group>"; };
+		438F24F81A61277000774D37 /* SensoriadaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensoriadaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		438F25001A61277000774D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438F25011A61277000774D37 /* SensoriadaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoriadaTests.swift; sourceTree = "<group>"; };
 		4B3CC0B2DD5595891CD57621 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5BD7C6633293A15D9774FD29 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7799FD1D64FCF7CEAF85876 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E667BD719DCD1704133074A8 /* Pods.framework in Frameworks */,
+				438F25051A61277000774D37 /* Sensoriada.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +102,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438F24EA1A61276F00774D37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438F24F51A61277000774D37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438F24F91A61277000774D37 /* Sensoriada.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +136,8 @@
 			children = (
 				438F24B51A607C4100774D37 /* SensoriadaExample */,
 				438F24CB1A607C4100774D37 /* SensoriadaExampleTests */,
+				438F24EF1A61276F00774D37 /* Sensoriada */,
+				438F24FE1A61277000774D37 /* SensoriadaTests */,
 				438F24B41A607C4100774D37 /* Products */,
 				7F081E6428939C6D330C9F2F /* Pods */,
 				3E0131897D5309AD9DC6B75D /* Frameworks */,
@@ -85,6 +149,8 @@
 			children = (
 				438F24B31A607C4100774D37 /* SensoriadaExample.app */,
 				438F24C81A607C4100774D37 /* SensoriadaExampleTests.xctest */,
+				438F24EE1A61276F00774D37 /* Sensoriada.framework */,
+				438F24F81A61277000774D37 /* SensoriadaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +233,40 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		438F24EF1A61276F00774D37 /* Sensoriada */ = {
+			isa = PBXGroup;
+			children = (
+				438F24F21A61277000774D37 /* Sensoriada.h */,
+				438F24F01A61276F00774D37 /* Supporting Files */,
+			);
+			path = Sensoriada;
+			sourceTree = "<group>";
+		};
+		438F24F01A61276F00774D37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				438F24F11A61276F00774D37 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		438F24FE1A61277000774D37 /* SensoriadaTests */ = {
+			isa = PBXGroup;
+			children = (
+				438F25011A61277000774D37 /* SensoriadaTests.swift */,
+				438F24FF1A61277000774D37 /* Supporting Files */,
+			);
+			path = SensoriadaTests;
+			sourceTree = "<group>";
+		};
+		438F24FF1A61277000774D37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				438F25001A61277000774D37 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7F081E6428939C6D330C9F2F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +277,17 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		438F24EB1A61276F00774D37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438F24F31A61277000774D37 /* Sensoriada.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		438F24B21A607C4100774D37 /* SensoriadaExample */ = {
@@ -189,10 +300,12 @@
 				438F24B11A607C4100774D37 /* Resources */,
 				0B0AAB56BE184D0E82ED016D /* Embed Pods Frameworks */,
 				1BBCA4314F8FBEDD6FEF97E8 /* Copy Pods Resources */,
+				438F250A1A61277000774D37 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				438F25041A61277000774D37 /* PBXTargetDependency */,
 			);
 			name = SensoriadaExample;
 			productName = SensoriadaExample;
@@ -217,6 +330,43 @@
 			productReference = 438F24C81A607C4100774D37 /* SensoriadaExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		438F24ED1A61276F00774D37 /* Sensoriada */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 438F25071A61277000774D37 /* Build configuration list for PBXNativeTarget "Sensoriada" */;
+			buildPhases = (
+				438F24E91A61276F00774D37 /* Sources */,
+				438F24EA1A61276F00774D37 /* Frameworks */,
+				438F24EB1A61276F00774D37 /* Headers */,
+				438F24EC1A61276F00774D37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sensoriada;
+			productName = Sensoriada;
+			productReference = 438F24EE1A61276F00774D37 /* Sensoriada.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		438F24F71A61277000774D37 /* SensoriadaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 438F250B1A61277000774D37 /* Build configuration list for PBXNativeTarget "SensoriadaTests" */;
+			buildPhases = (
+				438F24F41A61277000774D37 /* Sources */,
+				438F24F51A61277000774D37 /* Frameworks */,
+				438F24F61A61277000774D37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				438F24FB1A61277000774D37 /* PBXTargetDependency */,
+				438F24FD1A61277000774D37 /* PBXTargetDependency */,
+			);
+			name = SensoriadaTests;
+			productName = SensoriadaTests;
+			productReference = 438F24F81A61277000774D37 /* SensoriadaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,6 +380,13 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					438F24C71A607C4100774D37 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 438F24B21A607C4100774D37;
+					};
+					438F24ED1A61276F00774D37 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					438F24F71A61277000774D37 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 438F24B21A607C4100774D37;
 					};
@@ -250,6 +407,8 @@
 			targets = (
 				438F24B21A607C4100774D37 /* SensoriadaExample */,
 				438F24C71A607C4100774D37 /* SensoriadaExampleTests */,
+				438F24ED1A61276F00774D37 /* Sensoriada */,
+				438F24F71A61277000774D37 /* SensoriadaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +425,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		438F24C61A607C4100774D37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438F24EC1A61276F00774D37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438F24F61A61277000774D37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,6 +513,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		438F24E91A61276F00774D37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		438F24F41A61277000774D37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				438F25021A61277000774D37 /* SensoriadaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -347,6 +535,21 @@
 			isa = PBXTargetDependency;
 			target = 438F24B21A607C4100774D37 /* SensoriadaExample */;
 			targetProxy = 438F24C91A607C4100774D37 /* PBXContainerItemProxy */;
+		};
+		438F24FB1A61277000774D37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 438F24ED1A61276F00774D37 /* Sensoriada */;
+			targetProxy = 438F24FA1A61277000774D37 /* PBXContainerItemProxy */;
+		};
+		438F24FD1A61277000774D37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 438F24B21A607C4100774D37 /* SensoriadaExample */;
+			targetProxy = 438F24FC1A61277000774D37 /* PBXContainerItemProxy */;
+		};
+		438F25041A61277000774D37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 438F24ED1A61276F00774D37 /* Sensoriada */;
+			targetProxy = 438F25031A61277000774D37 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -486,6 +689,78 @@
 			};
 			name = Release;
 		};
+		438F25081A61277000774D37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Sensoriada/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		438F25091A61277000774D37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sensoriada/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		438F250C1A61277000774D37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SensoriadaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SensoriadaExample.app/SensoriadaExample";
+			};
+			name = Debug;
+		};
+		438F250D1A61277000774D37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SensoriadaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SensoriadaExample.app/SensoriadaExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -515,6 +790,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		438F25071A61277000774D37 /* Build configuration list for PBXNativeTarget "Sensoriada" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				438F25081A61277000774D37 /* Debug */,
+				438F25091A61277000774D37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		438F250B1A61277000774D37 /* Build configuration list for PBXNativeTarget "SensoriadaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				438F250C1A61277000774D37 /* Debug */,
+				438F250D1A61277000774D37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

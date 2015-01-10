@@ -34,6 +34,20 @@
                ReferencedContainer = "container:SensoriadaExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "438F24F71A61277000774D37"
+               BuildableName = "SensoriadaTests.xctest"
+               BlueprintName = "SensoriadaTests"
+               ReferencedContainer = "container:SensoriadaExample.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "438F24C71A607C4100774D37"
                BuildableName = "SensoriadaExampleTests.xctest"
                BlueprintName = "SensoriadaExampleTests"
+               ReferencedContainer = "container:SensoriadaExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "438F24F71A61277000774D37"
+               BuildableName = "SensoriadaTests.xctest"
+               BlueprintName = "SensoriadaTests"
                ReferencedContainer = "container:SensoriadaExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
