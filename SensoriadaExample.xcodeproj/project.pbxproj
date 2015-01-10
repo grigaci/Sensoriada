@@ -15,9 +15,10 @@
 		438F24E61A607C8800774D37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438F24E11A607C8800774D37 /* Images.xcassets */; };
 		438F24F31A61277000774D37 /* Sensoriada.h in Headers */ = {isa = PBXBuildFile; fileRef = 438F24F21A61277000774D37 /* Sensoriada.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		438F24F91A61277000774D37 /* Sensoriada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; };
-		438F25021A61277000774D37 /* SensoriadaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F25011A61277000774D37 /* SensoriadaTests.swift */; };
+		438F25021A61277000774D37 /* SRSensorBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F25011A61277000774D37 /* SRSensorBaseTests.swift */; };
 		438F25051A61277000774D37 /* Sensoriada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; };
 		438F25061A61277000774D37 /* Sensoriada.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		438F250F1A612B9F00774D37 /* SRSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F250E1A612B9F00774D37 /* SRSensorBase.swift */; };
 		E667BD719DCD1704133074A8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7C6633293A15D9774FD29 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -82,7 +83,8 @@
 		438F24F21A61277000774D37 /* Sensoriada.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sensoriada.h; sourceTree = "<group>"; };
 		438F24F81A61277000774D37 /* SensoriadaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensoriadaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		438F25001A61277000774D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		438F25011A61277000774D37 /* SensoriadaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoriadaTests.swift; sourceTree = "<group>"; };
+		438F25011A61277000774D37 /* SRSensorBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRSensorBaseTests.swift; sourceTree = "<group>"; };
+		438F250E1A612B9F00774D37 /* SRSensorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSensorBase.swift; sourceTree = "<group>"; };
 		4B3CC0B2DD5595891CD57621 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5BD7C6633293A15D9774FD29 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7799FD1D64FCF7CEAF85876 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				438F24F21A61277000774D37 /* Sensoriada.h */,
+				438F250E1A612B9F00774D37 /* SRSensorBase.swift */,
 				438F24F01A61276F00774D37 /* Supporting Files */,
 			);
 			path = Sensoriada;
@@ -253,7 +256,7 @@
 		438F24FE1A61277000774D37 /* SensoriadaTests */ = {
 			isa = PBXGroup;
 			children = (
-				438F25011A61277000774D37 /* SensoriadaTests.swift */,
+				438F25011A61277000774D37 /* SRSensorBaseTests.swift */,
 				438F24FF1A61277000774D37 /* Supporting Files */,
 			);
 			path = SensoriadaTests;
@@ -517,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438F250F1A612B9F00774D37 /* SRSensorBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438F25021A61277000774D37 /* SensoriadaTests.swift in Sources */,
+				438F25021A61277000774D37 /* SRSensorBaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +696,7 @@
 		438F25081A61277000774D37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -706,6 +711,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -714,6 +720,7 @@
 		438F25091A61277000774D37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
