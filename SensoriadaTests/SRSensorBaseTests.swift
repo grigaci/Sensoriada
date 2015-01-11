@@ -35,4 +35,10 @@ class SRSensorBaseTests: XCTestCase {
         XCTAssertEqual(sensorBase.type, SRSensorType.Unknown)
         XCTAssertEqual(sensorBase.version, String(version))
     }
+    
+    func testHumanReadableValue() {
+        var values = Dictionary<String, Any>()
+        let sensorBase = SRSensorBase(values: values)
+        XCTAssertEqual(sensorBase.humanReadableValue(), SRSensorBaseErrorDescription.NotAvailable.rawValue)
+    }
 }

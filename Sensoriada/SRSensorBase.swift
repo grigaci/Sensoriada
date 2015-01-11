@@ -10,6 +10,7 @@ import Foundation
 
 public enum SRSensorType: Int {
     case Unknown = -1
+    case Temperature = 10
 }
 
 public enum SRSensorBaseKeys: String {
@@ -18,6 +19,10 @@ public enum SRSensorBaseKeys: String {
 }
 
 public let kSRSensorBaseVersionDefault = "0.0.0"
+
+public enum SRSensorBaseErrorDescription: String {
+    case NotAvailable = "Not available"
+}
 
 public class SRSensorBase {
 
@@ -41,4 +46,9 @@ public class SRSensorBase {
             }
         }
     }
+
+    public func humanReadableValue() -> String {
+        return SRSensorBaseErrorDescription.NotAvailable.rawValue
+    }
+
 }
