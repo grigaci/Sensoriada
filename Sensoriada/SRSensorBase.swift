@@ -24,6 +24,16 @@ public enum SRSensorBaseErrorDescription: String {
     case NotAvailable = "Not available"
 }
 
+private func _SRSensorGetType(values: Dictionary<String, Any>) -> SRSensorType {
+    if let rawType = values[SRSensorBaseKeys.type.rawValue] as? Int {
+        if let convertedType = SRSensorType(rawValue: rawType) {
+            return convertedType
+        }
+    }
+
+    return SRSensorType.Unknown
+}
+
 public class SRSensorBase {
 
     public var type: SRSensorType
@@ -39,12 +49,8 @@ public class SRSensorBase {
         if let rawVersion = values[SRSensorBaseKeys.version.rawValue] as? Int {
             self.version = String(rawVersion)
         }
-        
-        if let rawType = values[SRSensorBaseKeys.type.rawValue] as? Int {
-            if let convertedType = SRSensorType(rawValue: rawType) {
-                self.type = convertedType
-            }
-        }
+
+        self.type = _SRSensorGetType(values)
     }
 
     public func humanReadableValue() -> String {
@@ -52,3 +58,13 @@ public class SRSensorBase {
     }
 
 }
+
+public func SRSensorFactoryCreateFromDictionary(values: Dictionary<String, Any>) -> SRSensorBase! {
+    switch (_SRSensorGetType(values)) {
+    case .Unknown:
+        return nil
+    case .Temperature:
+        return SRSensorTemperature(values: values)
+    }
+}
+

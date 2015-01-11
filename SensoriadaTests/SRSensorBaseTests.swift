@@ -12,6 +12,8 @@ import Sensoriada
 
 class SRSensorBaseTests: XCTestCase {
 
+    private let unknownSensorType: Int = 1000
+
     func testWithEmptyDictionary() {
         let values = Dictionary<String, Any>()
         let sensorBase = SRSensorBase(values: values)
@@ -21,7 +23,7 @@ class SRSensorBaseTests: XCTestCase {
     
     func testWithUnknownType() {
         var values = Dictionary<String, Any>()
-        values[SRSensorBaseKeys.type.rawValue] = Int(1000)
+        values[SRSensorBaseKeys.type.rawValue] = unknownSensorType
         let sensorBase = SRSensorBase(values: values)
         XCTAssertEqual(sensorBase.type, SRSensorType.Unknown)
         XCTAssertEqual(sensorBase.version, kSRSensorBaseVersionDefault)
@@ -41,4 +43,19 @@ class SRSensorBaseTests: XCTestCase {
         let sensorBase = SRSensorBase(values: values)
         XCTAssertEqual(sensorBase.humanReadableValue(), SRSensorBaseErrorDescription.NotAvailable.rawValue)
     }
+    
+    func testFactoryCreateFromDictionaryInvalidType() {
+        var values = Dictionary<String, Any>()
+        values[SRSensorBaseKeys.type.rawValue] = unknownSensorType
+        let sensor = SRSensorFactoryCreateFromDictionary(values)
+        XCTAssert(sensor == nil)
+    }
+    
+    func testFactoryCreateFromDictionarySensorType() {
+        var values = Dictionary<String, Any>()
+        values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
+        let sensorTemperature = SRSensorFactoryCreateFromDictionary(values) as SRSensorTemperature
+        XCTAssertEqual(sensorTemperature.type, SRSensorType.Temperature)
+    }
+
 }
