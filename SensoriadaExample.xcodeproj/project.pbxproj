@@ -21,6 +21,12 @@
 		438F250F1A612B9F00774D37 /* SRSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F250E1A612B9F00774D37 /* SRSensorBase.swift */; };
 		6524A08B1A629A5A00E64BA1 /* SRSensorTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A08A1A629A5A00E64BA1 /* SRSensorTemperature.swift */; };
 		6524A08D1A629C8400E64BA1 /* SRSensorTemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A08C1A629C8400E64BA1 /* SRSensorTemperatureTests.swift */; };
+		6524A08F1A62A7A200E64BA1 /* SRSensorsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A08E1A62A7A200E64BA1 /* SRSensorsNode.swift */; };
+		6524A0911A62A7F200E64BA1 /* SRSendorsNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A0901A62A7F200E64BA1 /* SRSendorsNodeTests.swift */; };
+		6524A0931A62AFFB00E64BA1 /* NSDate+SRHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A0921A62AFFB00E64BA1 /* NSDate+SRHelpers.swift */; };
+		6524A0951A62B0BE00E64BA1 /* NSDateFormatter+SRHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A0941A62B0BE00E64BA1 /* NSDateFormatter+SRHelpers.swift */; };
+		6524A0971A62B29200E64BA1 /* String+SRHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A0961A62B29200E64BA1 /* String+SRHelpers.swift */; };
+		6524A09E1A62B6D500E64BA1 /* XCTestCase+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A09D1A62B6D500E64BA1 /* XCTestCase+Factory.swift */; };
 		E667BD719DCD1704133074A8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD7C6633293A15D9774FD29 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -91,6 +97,12 @@
 		5BD7C6633293A15D9774FD29 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6524A08A1A629A5A00E64BA1 /* SRSensorTemperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSensorTemperature.swift; sourceTree = "<group>"; };
 		6524A08C1A629C8400E64BA1 /* SRSensorTemperatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSensorTemperatureTests.swift; sourceTree = "<group>"; };
+		6524A08E1A62A7A200E64BA1 /* SRSensorsNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSensorsNode.swift; sourceTree = "<group>"; };
+		6524A0901A62A7F200E64BA1 /* SRSendorsNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSendorsNodeTests.swift; sourceTree = "<group>"; };
+		6524A0921A62AFFB00E64BA1 /* NSDate+SRHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+SRHelpers.swift"; sourceTree = "<group>"; };
+		6524A0941A62B0BE00E64BA1 /* NSDateFormatter+SRHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateFormatter+SRHelpers.swift"; sourceTree = "<group>"; };
+		6524A0961A62B29200E64BA1 /* String+SRHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SRHelpers.swift"; sourceTree = "<group>"; };
+		6524A09D1A62B6D500E64BA1 /* XCTestCase+Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "XCTestCase+Factory.swift"; path = "Helpers/Category/XCTestCase/XCTestCase+Factory.swift"; sourceTree = "<group>"; };
 		B7799FD1D64FCF7CEAF85876 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,6 +257,10 @@
 				438F24F21A61277000774D37 /* Sensoriada.h */,
 				438F250E1A612B9F00774D37 /* SRSensorBase.swift */,
 				6524A08A1A629A5A00E64BA1 /* SRSensorTemperature.swift */,
+				6524A08E1A62A7A200E64BA1 /* SRSensorsNode.swift */,
+				6524A0921A62AFFB00E64BA1 /* NSDate+SRHelpers.swift */,
+				6524A0941A62B0BE00E64BA1 /* NSDateFormatter+SRHelpers.swift */,
+				6524A0961A62B29200E64BA1 /* String+SRHelpers.swift */,
 				438F24F01A61276F00774D37 /* Supporting Files */,
 			);
 			path = Sensoriada;
@@ -261,8 +277,10 @@
 		438F24FE1A61277000774D37 /* SensoriadaTests */ = {
 			isa = PBXGroup;
 			children = (
+				6524A0981A62B63E00E64BA1 /* Helpers */,
 				438F25011A61277000774D37 /* SRSensorBaseTests.swift */,
 				6524A08C1A629C8400E64BA1 /* SRSensorTemperatureTests.swift */,
+				6524A0901A62A7F200E64BA1 /* SRSendorsNodeTests.swift */,
 				438F24FF1A61277000774D37 /* Supporting Files */,
 			);
 			path = SensoriadaTests;
@@ -274,6 +292,30 @@
 				438F25001A61277000774D37 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6524A0981A62B63E00E64BA1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6524A0991A62B64400E64BA1 /* Category */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		6524A0991A62B64400E64BA1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				6524A09A1A62B68200E64BA1 /* XCTestCase */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		6524A09A1A62B68200E64BA1 /* XCTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				6524A09D1A62B6D500E64BA1 /* XCTestCase+Factory.swift */,
+			);
+			name = XCTestCase;
 			sourceTree = "<group>";
 		};
 		7F081E6428939C6D330C9F2F /* Pods */ = {
@@ -526,8 +568,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6524A0951A62B0BE00E64BA1 /* NSDateFormatter+SRHelpers.swift in Sources */,
 				438F250F1A612B9F00774D37 /* SRSensorBase.swift in Sources */,
+				6524A08F1A62A7A200E64BA1 /* SRSensorsNode.swift in Sources */,
 				6524A08B1A629A5A00E64BA1 /* SRSensorTemperature.swift in Sources */,
+				6524A0931A62AFFB00E64BA1 /* NSDate+SRHelpers.swift in Sources */,
+				6524A0971A62B29200E64BA1 /* String+SRHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +583,8 @@
 			files = (
 				438F25021A61277000774D37 /* SRSensorBaseTests.swift in Sources */,
 				6524A08D1A629C8400E64BA1 /* SRSensorTemperatureTests.swift in Sources */,
+				6524A09E1A62B6D500E64BA1 /* XCTestCase+Factory.swift in Sources */,
+				6524A0911A62A7F200E64BA1 /* SRSendorsNodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

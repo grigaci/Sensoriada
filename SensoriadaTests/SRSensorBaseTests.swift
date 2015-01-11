@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Grigaci. All rights reserved.
 //
 
-import UIKit
 import XCTest
 import Sensoriada
 
