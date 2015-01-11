@@ -10,11 +10,11 @@ import XCTest
 import Sensoriada
 
 extension XCTestCase {
-    func validSensorsNodesDictionary() -> [String: Any] {
+    func validSensorsNodesDictionary() -> [String : AnyObject] {
         let date = NSDate()
         let dateString = NSDate().SR_toString()
-        
-        var dictionary = Dictionary<String, Any>()
+
+        var dictionary = [String : AnyObject]()
         dictionary[SRSensorsNodeDictionaryKeys.nodeID.rawValue] = 0
         dictionary[SRSensorsNodeDictionaryKeys.voltage.rawValue] = 220
         dictionary[SRSensorsNodeDictionaryKeys.secondsAgo.rawValue] = 1
@@ -22,8 +22,8 @@ extension XCTestCase {
         return dictionary
     }
 
-    func validTemperatureSensorDictionary() -> [String: Any] {
-        var dictionary = Dictionary<String, Any>()
+    func validTemperatureSensorDictionary() -> [String : AnyObject] {
+        var dictionary = [String : AnyObject]()
         let rawTemperature: Int = 1010
         let temperature: Float = Float(rawTemperature) / 100.0 // 10.10 °C
         dictionary[SRSensorTemperatureKeys.value.rawValue] = rawTemperature

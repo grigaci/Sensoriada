@@ -13,7 +13,7 @@ import Sensoriada
 class SRSensorTemperatureTests: XCTestCase {
 
     func testWithValidType() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         let sensorTemperature = SRSensorTemperature(values: values)
         XCTAssertEqual(sensorTemperature.type, SRSensorType.Temperature)
@@ -21,7 +21,7 @@ class SRSensorTemperatureTests: XCTestCase {
     }
 
     func testWithWrongValueType() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         values[SRSensorTemperatureKeys.value.rawValue] = NSDate()
         let sensorTemperature = SRSensorTemperature(values: values)
@@ -29,7 +29,7 @@ class SRSensorTemperatureTests: XCTestCase {
     }
 
     func testWithRightValueType() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         let rawTemperature: Int = 1010
         let temperature: Float = Float(rawTemperature) / 100.0 // 10.10 °C
         values[SRSensorTemperatureKeys.value.rawValue] = rawTemperature
@@ -39,14 +39,14 @@ class SRSensorTemperatureTests: XCTestCase {
     }
 
     func testHumanReadableValueWithoutValue() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         let sensorTemperature = SRSensorTemperature(values: values)
         XCTAssertEqual(sensorTemperature.humanReadableValue(), SRSensorBaseErrorDescription.NotAvailable.rawValue)
     }
     
     func testHumanReadableValueWithValue() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         let rawTemperature: Int = -2000
         let temperature: Float = Float(rawTemperature) / 100.0  // -20 °C
         values[SRSensorTemperatureKeys.value.rawValue] = rawTemperature

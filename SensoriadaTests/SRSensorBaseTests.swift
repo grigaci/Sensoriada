@@ -14,14 +14,14 @@ class SRSensorBaseTests: XCTestCase {
     private let unknownSensorType: Int = 1000
 
     func testWithEmptyDictionary() {
-        let values = Dictionary<String, Any>()
+        let values = [String : AnyObject]()
         let sensorBase = SRSensorBase(values: values)
         XCTAssertEqual(sensorBase.type, SRSensorType.Unknown)
         XCTAssertEqual(sensorBase.version, kSRSensorBaseVersionDefault)
     }
     
     func testWithUnknownType() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         values[SRSensorBaseKeys.type.rawValue] = unknownSensorType
         let sensorBase = SRSensorBase(values: values)
         XCTAssertEqual(sensorBase.type, SRSensorType.Unknown)
@@ -29,7 +29,7 @@ class SRSensorBaseTests: XCTestCase {
     }
     
     func testWithVersion() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         let version = 1
         values[SRSensorBaseKeys.version.rawValue] = version
         let sensorBase = SRSensorBase(values: values)
@@ -38,20 +38,20 @@ class SRSensorBaseTests: XCTestCase {
     }
     
     func testHumanReadableValue() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         let sensorBase = SRSensorBase(values: values)
         XCTAssertEqual(sensorBase.humanReadableValue(), SRSensorBaseErrorDescription.NotAvailable.rawValue)
     }
     
     func testFactoryCreateFromDictionaryInvalidType() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         values[SRSensorBaseKeys.type.rawValue] = unknownSensorType
         let sensor = SRSensorFactoryCreateFromDictionary(values)
         XCTAssert(sensor == nil)
     }
     
     func testFactoryCreateFromDictionarySensorType() {
-        var values = Dictionary<String, Any>()
+        var values = [String : AnyObject]()
         values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         let sensorTemperature = SRSensorFactoryCreateFromDictionary(values) as SRSensorTemperature
         XCTAssertEqual(sensorTemperature.type, SRSensorType.Temperature)

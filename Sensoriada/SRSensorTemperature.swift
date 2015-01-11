@@ -14,7 +14,7 @@ public class SRSensorTemperature: SRSensorBase {
 
     public var temperature: Float!
 
-    public override func parseRawValues(values: Dictionary<String, Any>) {
+    public override func parseRawValues(values: [String : AnyObject]) {
         super.parseRawValues(values)
         assert(self.type == SRSensorType.Temperature, "Invalid sensor type value for SRSensorTemperature.")
 

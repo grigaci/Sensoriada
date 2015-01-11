@@ -12,7 +12,7 @@ import Sensoriada
 class SRSendorsNodeTests: XCTestCase {
 
     func testWithEmptyDictionary() {
-        let dictionary = Dictionary<String, Any>()
+        let dictionary = [String : AnyObject]()
         let node = SRSensorsNode(dictionary: dictionary)
         XCTAssertEqual(node.nodeID, SRSensorsNodeErrorCodes.MissingNodeID.rawValue)
         XCTAssert(node.voltage == nil)

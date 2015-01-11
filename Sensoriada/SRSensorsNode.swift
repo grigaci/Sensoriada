@@ -28,13 +28,13 @@ public class SRSensorsNode {
     public var date: NSDate!
     public var sensors: Array<SRSensorBase>
 
-    public init(dictionary: Dictionary<String, Any>) {
+    public init(dictionary: [String : AnyObject]) {
         self.sensors = Array<SRSensorBase>()
         self.nodeID = SRSensorsNodeErrorCodes.MissingNodeID.rawValue
         self.loadFromDictionary(dictionary)
     }
 
-    func loadFromDictionary(dictionary: Dictionary<String, Any>) {
+    func loadFromDictionary(dictionary: [String : AnyObject]) {
         if let rawNodeID = dictionary[SRSensorsNodeDictionaryKeys.nodeID.rawValue] as? Int {
             self.nodeID = rawNodeID
         }
@@ -53,7 +53,7 @@ public class SRSensorsNode {
             }
         }
         
-        if let rawSensorsArray = dictionary[SRSensorsNodeDictionaryKeys.sensors.rawValue] as? [[String: Any]] {
+        if let rawSensorsArray = dictionary[SRSensorsNodeDictionaryKeys.sensors.rawValue] as? [[String: AnyObject]] {
             for rawSensor in rawSensorsArray {
                 let sensor = SRSensorFactoryCreateFromDictionary(rawSensor)
                 self.sensors.append(sensor)
