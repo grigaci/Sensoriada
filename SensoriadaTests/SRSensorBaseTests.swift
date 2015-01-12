@@ -22,7 +22,7 @@ class SRSensorBaseTests: XCTestCase {
     
     func testWithUnknownType() {
         var values = [String : AnyObject]()
-        values[SRSensorBaseKeys.type.rawValue] = unknownSensorType
+        values[SRSensorBaseDictionaryKeys.type.rawValue] = unknownSensorType
         let sensorBase = SRSensorBase(values: values)
         XCTAssertEqual(sensorBase.type, SRSensorType.Unknown)
         XCTAssertEqual(sensorBase.version, kSRSensorBaseVersionDefault)
@@ -31,7 +31,7 @@ class SRSensorBaseTests: XCTestCase {
     func testWithVersion() {
         var values = [String : AnyObject]()
         let version = 1
-        values[SRSensorBaseKeys.version.rawValue] = version
+        values[SRSensorBaseDictionaryKeys.version.rawValue] = version
         let sensorBase = SRSensorBase(values: values)
         XCTAssertEqual(sensorBase.type, SRSensorType.Unknown)
         XCTAssertEqual(sensorBase.version, String(version))
@@ -45,14 +45,14 @@ class SRSensorBaseTests: XCTestCase {
     
     func testFactoryCreateFromDictionaryInvalidType() {
         var values = [String : AnyObject]()
-        values[SRSensorBaseKeys.type.rawValue] = unknownSensorType
+        values[SRSensorBaseDictionaryKeys.type.rawValue] = unknownSensorType
         let sensor = SRSensorFactoryCreateFromDictionary(values)
         XCTAssert(sensor == nil)
     }
     
     func testFactoryCreateFromDictionarySensorType() {
         var values = [String : AnyObject]()
-        values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
+        values[SRSensorBaseDictionaryKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         let sensorTemperature = SRSensorFactoryCreateFromDictionary(values) as SRSensorTemperature
         XCTAssertEqual(sensorTemperature.type, SRSensorType.Temperature)
     }

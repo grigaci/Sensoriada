@@ -14,7 +14,7 @@ class SRSensorTemperatureTests: XCTestCase {
 
     func testWithValidType() {
         var values = [String : AnyObject]()
-        values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
+        values[SRSensorBaseDictionaryKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         let sensorTemperature = SRSensorTemperature(values: values)
         XCTAssertEqual(sensorTemperature.type, SRSensorType.Temperature)
         XCTAssert(sensorTemperature.temperature == nil)
@@ -22,8 +22,8 @@ class SRSensorTemperatureTests: XCTestCase {
 
     func testWithWrongValueType() {
         var values = [String : AnyObject]()
-        values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
-        values[SRSensorTemperatureKeys.value.rawValue] = NSDate()
+        values[SRSensorBaseDictionaryKeys.type.rawValue] = SRSensorType.Temperature.rawValue
+        values[SRSensorTemperatureDictionaryKeys.value.rawValue] = NSDate()
         let sensorTemperature = SRSensorTemperature(values: values)
         XCTAssert(sensorTemperature.temperature == nil)
     }
@@ -32,15 +32,15 @@ class SRSensorTemperatureTests: XCTestCase {
         var values = [String : AnyObject]()
         let rawTemperature: Int = 1010
         let temperature: Float = Float(rawTemperature) / 100.0 // 10.10 °C
-        values[SRSensorTemperatureKeys.value.rawValue] = rawTemperature
-        values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
+        values[SRSensorTemperatureDictionaryKeys.value.rawValue] = rawTemperature
+        values[SRSensorBaseDictionaryKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         let sensorTemperature = SRSensorTemperature(values: values)
         XCTAssertEqual(sensorTemperature.temperature!, temperature)
     }
 
     func testHumanReadableValueWithoutValue() {
         var values = [String : AnyObject]()
-        values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
+        values[SRSensorBaseDictionaryKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         let sensorTemperature = SRSensorTemperature(values: values)
         XCTAssertEqual(sensorTemperature.humanReadableValue(), SRSensorBaseErrorDescription.NotAvailable.rawValue)
     }
@@ -49,8 +49,8 @@ class SRSensorTemperatureTests: XCTestCase {
         var values = [String : AnyObject]()
         let rawTemperature: Int = -2000
         let temperature: Float = Float(rawTemperature) / 100.0  // -20 °C
-        values[SRSensorTemperatureKeys.value.rawValue] = rawTemperature
-        values[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
+        values[SRSensorTemperatureDictionaryKeys.value.rawValue] = rawTemperature
+        values[SRSensorBaseDictionaryKeys.type.rawValue] = SRSensorType.Temperature.rawValue
 
         let sensorTemperature = SRSensorTemperature(values: values)
         let expectedTemperature = "\(temperature) °C"

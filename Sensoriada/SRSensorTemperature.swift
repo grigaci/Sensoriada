@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Grigaci. All rights reserved.
 //
 
-public enum SRSensorTemperatureKeys: String {
+public enum SRSensorTemperatureDictionaryKeys: String {
     case value = "value"
 }
 
@@ -25,7 +25,7 @@ public class SRSensorTemperature: SRSensorBase {
         super.parseRawValues(values)
         assert(self.type == SRSensorType.Temperature, "Invalid sensor type value for SRSensorTemperature.")
 
-        if let rawValue = values[SRSensorTemperatureKeys.value.rawValue] as? Int {
+        if let rawValue = values[SRSensorTemperatureDictionaryKeys.value.rawValue] as? Int {
             self.temperature = Float(rawValue) / 100.0
         }
     }

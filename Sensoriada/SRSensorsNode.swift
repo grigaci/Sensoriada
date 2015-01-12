@@ -13,7 +13,7 @@ public enum SRSensorsNodeErrorCodes: Int {
 }
 
 public enum SRSensorsNodeDictionaryKeys: String {
-    case nodeID = "nodeID"
+    case nodeID = "id"
     case voltage = "voltage"
     case secondsAgo = "secondsAgo"
     case date = "date"

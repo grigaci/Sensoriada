@@ -11,7 +11,7 @@ import Foundation
 extension String {
     public func SR_toDate() -> NSDate! {
         let dateFormatter = NSDateFormatter.SR_sharedInstance
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss zzz"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.locale = NSLocale.systemLocale()
         let convertedDate = dateFormatter.dateFromString(self)
         return convertedDate

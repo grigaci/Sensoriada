@@ -13,7 +13,7 @@ public enum SRSensorType: Int {
     case Temperature = 10
 }
 
-public enum SRSensorBaseKeys: String {
+public enum SRSensorBaseDictionaryKeys: String {
     case type = "type"
     case version = "version"
 }
@@ -26,7 +26,7 @@ public enum SRSensorBaseErrorDescription: String {
 }
 
 private func _SRSensorGetType(values: [String : AnyObject]) -> SRSensorType {
-    if let rawType = values[SRSensorBaseKeys.type.rawValue] as? Int {
+    if let rawType = values[SRSensorBaseDictionaryKeys.type.rawValue] as? Int {
         if let convertedType = SRSensorType(rawValue: rawType) {
             return convertedType
         }
@@ -49,7 +49,7 @@ public class SRSensorBase {
     }
 
     public func parseRawValues(values: [String : AnyObject]) {
-        if let rawVersion = values[SRSensorBaseKeys.version.rawValue] as? Int {
+        if let rawVersion = values[SRSensorBaseDictionaryKeys.version.rawValue] as? Int {
             self.version = String(rawVersion)
         }
 

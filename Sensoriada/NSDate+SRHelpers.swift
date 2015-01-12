@@ -12,7 +12,7 @@ extension NSDate {
 
     public func SR_toString() -> String {
         let dateFormatter = NSDateFormatter.SR_sharedInstance
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss zzz"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         dateFormatter.locale = NSLocale.systemLocale()
         let convertedString = dateFormatter.stringFromDate(self)
         return convertedString

@@ -26,8 +26,8 @@ extension XCTestCase {
         var dictionary = [String : AnyObject]()
         let rawTemperature: Int = 1010
         let temperature: Float = Float(rawTemperature) / 100.0 // 10.10 °C
-        dictionary[SRSensorTemperatureKeys.value.rawValue] = rawTemperature
-        dictionary[SRSensorBaseKeys.type.rawValue] = SRSensorType.Temperature.rawValue
+        dictionary[SRSensorTemperatureDictionaryKeys.value.rawValue] = rawTemperature
+        dictionary[SRSensorBaseDictionaryKeys.type.rawValue] = SRSensorType.Temperature.rawValue
         return dictionary
     }
 }
