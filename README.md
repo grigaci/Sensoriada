@@ -7,7 +7,7 @@ Its purpose is to read & parse sensor values received from a hub.
 
 # SensoriadaExample
 
-Demo project that reads data from an url, analyse it using [Sensoriada](# Sensoriada) framework and displays it to the user.
+Demo project that reads data from an url, analyse it using [Sensoriada](#sensoriada) framework and displays it to the user.
 Example of an compatible JSON that can be read by the framework:
 ```json
 {
