@@ -14,19 +14,25 @@ public class SRAllNodesDatasource: NSObject, UITableViewDataSource, UITableViewD
     
     var allNodes: [SRSensorsNode] = [SRSensorsNode]()
     let tableView: UITableView
+    let headerFooterIdentifier: String
 
     init(_ aTableView: UITableView) {
         self.tableView = aTableView
+        self.headerFooterIdentifier = NSUUID().UUIDString
+
         super.init()
+
         self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.registerClass(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: self.headerFooterIdentifier)
     }
 
-    public func reload() {
+    public func reload(callback :(error: NSError!) -> Void) {
         self.allNodes.removeAll(keepCapacity: true)
         self.tableView.reloadData()
 
         Alamofire.request(.GET, kYourHubURLAddress)
-            .responseJSON { (_, _, JSON, _) in
+            .responseJSON { (_, _, JSON, error) in
                 if let dict = JSON as? [String : AnyObject] {
                     if let rawNodesJSONArray = dict["sensorNodes"] as? [[String: AnyObject]] {
                         for rawNodeJSON in rawNodesJSONArray {
@@ -36,6 +42,7 @@ public class SRAllNodesDatasource: NSObject, UITableViewDataSource, UITableViewD
                     }
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.tableView.reloadData()
+                            callback(error: error)
                     })
                 }
         }
@@ -66,5 +73,16 @@ public class SRAllNodesDatasource: NSObject, UITableViewDataSource, UITableViewD
         cell.textLabel?.text = sensor.sensorName
 
         return cell
+    }
+    
+    // UITableViewDelegate methods
+    public func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let node = self.allNodes[section]
+        if let view = self.tableView.dequeueReusableHeaderFooterViewWithIdentifier(self.headerFooterIdentifier) as? UITableViewHeaderFooterView {
+            view.textLabel.text = "Node \(node.nodeID)"
+            return view
+        }
+
+        return nil
     }
 }

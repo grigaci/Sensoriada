@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C94b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fv8-5D-ERN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fv8-5D-ERN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -36,8 +36,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Nodes" id="2qa-wN-XJ2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QO5-wq-1im"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="QO5-wq-1im">
+                            <connections>
+                                <action selector="sync:" destination="eW7-c6-a0f" id="8Z2-30-vhV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="syncBarButton" destination="QO5-wq-1im" id="AMu-BL-Kgb"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Idk-RW-k7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

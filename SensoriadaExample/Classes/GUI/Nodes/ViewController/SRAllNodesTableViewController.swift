@@ -13,16 +13,25 @@ class SRAllNodesTableViewController: UITableViewController {
 
     var datasource: SRAllNodesDatasource!
 
+    @IBOutlet weak var syncBarButton: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.datasource = SRAllNodesDatasource(self.tableView)
+        self.sync(nil)
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        self.datasource.reload()
+    @IBAction func sync(sender: AnyObject!) {
+        self.syncBarButton.enabled = false
+        self.datasource.reload({
+            (error) in
+            if error != nil {
+                self.showError(error!)
+            }
+            self.syncBarButton.enabled = true
+        })
     }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SRSensorViewControllerSegue" {
             let sensorViewController = segue.destinationViewController as SRSensorTableViewController
@@ -34,4 +43,11 @@ class SRAllNodesTableViewController: UITableViewController {
             }
         }
     }
+    
+    private func showError(error: NSError) {
+        let message = "Could not fetch data! Error: \(error)"
+        let alertView = UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: nil)
+        alertView.show()
+    }
+
 }

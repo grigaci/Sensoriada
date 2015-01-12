@@ -306,7 +306,6 @@
 			children = (
 				438F25111A6305A300774D37 /* Datasource */,
 				438F25121A6305A300774D37 /* ViewController */,
-				438F25141A6305A300774D37 /* Views */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -325,13 +324,6 @@
 				438F25131A6305A300774D37 /* SRAllNodesTableViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		438F25141A6305A300774D37 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		438F25181A63102F00774D37 /* Sensor */ = {
