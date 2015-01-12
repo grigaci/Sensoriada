@@ -8,6 +8,8 @@
 
 import UIKit
 
+let kYourHubURLAddress = ""
+
 @UIApplicationMain
 class SRAppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -11,7 +11,6 @@
 		438F24E21A607C8800774D37 /* SRAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F24D91A607C8800774D37 /* SRAppDelegate.swift */; };
 		438F24E31A607C8800774D37 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438F24DC1A607C8800774D37 /* LaunchScreen.xib */; };
 		438F24E41A607C8800774D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438F24DD1A607C8800774D37 /* Main.storyboard */; };
-		438F24E51A607C8800774D37 /* RMAllSensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F24DE1A607C8800774D37 /* RMAllSensorsViewController.swift */; };
 		438F24E61A607C8800774D37 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438F24E11A607C8800774D37 /* Images.xcassets */; };
 		438F24F31A61277000774D37 /* Sensoriada.h in Headers */ = {isa = PBXBuildFile; fileRef = 438F24F21A61277000774D37 /* Sensoriada.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		438F24F91A61277000774D37 /* Sensoriada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; };
@@ -19,6 +18,10 @@
 		438F25051A61277000774D37 /* Sensoriada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; };
 		438F25061A61277000774D37 /* Sensoriada.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 438F24EE1A61276F00774D37 /* Sensoriada.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		438F250F1A612B9F00774D37 /* SRSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F250E1A612B9F00774D37 /* SRSensorBase.swift */; };
+		438F25151A6305A300774D37 /* SRAllNodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F25131A6305A300774D37 /* SRAllNodesTableViewController.swift */; };
+		438F25171A63069100774D37 /* SRAllNodesDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F25161A63069100774D37 /* SRAllNodesDatasource.swift */; };
+		438F251C1A63107000774D37 /* SRSensorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F251B1A63107000774D37 /* SRSensorTableViewController.swift */; };
+		438F251E1A63117600774D37 /* SRSensorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F251D1A63117600774D37 /* SRSensorDatasource.swift */; };
 		6524A08B1A629A5A00E64BA1 /* SRSensorTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A08A1A629A5A00E64BA1 /* SRSensorTemperature.swift */; };
 		6524A08D1A629C8400E64BA1 /* SRSensorTemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A08C1A629C8400E64BA1 /* SRSensorTemperatureTests.swift */; };
 		6524A08F1A62A7A200E64BA1 /* SRSensorsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6524A08E1A62A7A200E64BA1 /* SRSensorsNode.swift */; };
@@ -83,7 +86,6 @@
 		438F24D91A607C8800774D37 /* SRAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRAppDelegate.swift; sourceTree = "<group>"; };
 		438F24DC1A607C8800774D37 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		438F24DD1A607C8800774D37 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		438F24DE1A607C8800774D37 /* RMAllSensorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMAllSensorsViewController.swift; sourceTree = "<group>"; };
 		438F24E11A607C8800774D37 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		438F24E81A607C9200774D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438F24EE1A61276F00774D37 /* Sensoriada.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sensoriada.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,10 @@
 		438F25001A61277000774D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438F25011A61277000774D37 /* SRSensorBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRSensorBaseTests.swift; sourceTree = "<group>"; };
 		438F250E1A612B9F00774D37 /* SRSensorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSensorBase.swift; sourceTree = "<group>"; };
+		438F25131A6305A300774D37 /* SRAllNodesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRAllNodesTableViewController.swift; sourceTree = "<group>"; };
+		438F25161A63069100774D37 /* SRAllNodesDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRAllNodesDatasource.swift; sourceTree = "<group>"; };
+		438F251B1A63107000774D37 /* SRSensorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSensorTableViewController.swift; sourceTree = "<group>"; };
+		438F251D1A63117600774D37 /* SRSensorDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSensorDatasource.swift; sourceTree = "<group>"; };
 		4B3CC0B2DD5595891CD57621 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5BD7C6633293A15D9774FD29 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6524A08A1A629A5A00E64BA1 /* SRSensorTemperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRSensorTemperature.swift; sourceTree = "<group>"; };
@@ -212,8 +218,9 @@
 		438F24DA1A607C8800774D37 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				438F25181A63102F00774D37 /* Sensor */,
+				438F25101A6305A300774D37 /* Nodes */,
 				438F24DB1A607C8800774D37 /* Storyboards */,
-				438F24DE1A607C8800774D37 /* RMAllSensorsViewController.swift */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
@@ -292,6 +299,66 @@
 				438F25001A61277000774D37 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		438F25101A6305A300774D37 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				438F25111A6305A300774D37 /* Datasource */,
+				438F25121A6305A300774D37 /* ViewController */,
+				438F25141A6305A300774D37 /* Views */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		438F25111A6305A300774D37 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				438F25161A63069100774D37 /* SRAllNodesDatasource.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		438F25121A6305A300774D37 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				438F25131A6305A300774D37 /* SRAllNodesTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		438F25141A6305A300774D37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		438F25181A63102F00774D37 /* Sensor */ = {
+			isa = PBXGroup;
+			children = (
+				438F25191A63105300774D37 /* Datasource */,
+				438F251A1A63105300774D37 /* ViewController */,
+			);
+			name = Sensor;
+			sourceTree = "<group>";
+		};
+		438F25191A63105300774D37 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				438F251D1A63117600774D37 /* SRSensorDatasource.swift */,
+			);
+			name = Datasource;
+			path = Sensor/Datasource;
+			sourceTree = "<group>";
+		};
+		438F251A1A63105300774D37 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				438F251B1A63107000774D37 /* SRSensorTableViewController.swift */,
+			);
+			name = ViewController;
+			path = Sensor/ViewController;
 			sourceTree = "<group>";
 		};
 		6524A0981A62B63E00E64BA1 /* Helpers */ = {
@@ -551,7 +618,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				438F24E51A607C8800774D37 /* RMAllSensorsViewController.swift in Sources */,
+				438F25151A6305A300774D37 /* SRAllNodesTableViewController.swift in Sources */,
+				438F251E1A63117600774D37 /* SRSensorDatasource.swift in Sources */,
+				438F25171A63069100774D37 /* SRAllNodesDatasource.swift in Sources */,
+				438F251C1A63107000774D37 /* SRSensorTableViewController.swift in Sources */,
 				438F24E21A607C8800774D37 /* SRAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

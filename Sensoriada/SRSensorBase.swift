@@ -57,6 +57,12 @@ public class SRSensorBase {
         return SRSensorBaseErrorDescription.NotAvailable.rawValue
     }
 
+    public func valuesToDisplay() -> [String : String] {
+        var values = [String : String]()
+        values["Type"] = String(self.type.rawValue)
+        values["Version"] = self.version
+        return values
+    }
 }
 
 public func SRSensorFactoryCreateFromDictionary(values: [String : AnyObject]) -> SRSensorBase! {

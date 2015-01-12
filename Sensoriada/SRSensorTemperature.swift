@@ -31,4 +31,9 @@ public class SRSensorTemperature: SRSensorBase {
         return super.humanReadableValue()
     }
 
+    public override func valuesToDisplay() -> [String : String] {
+        var values = super.valuesToDisplay()
+        values["Temperature"] = self.humanReadableValue()
+        return values
+    }
 }
