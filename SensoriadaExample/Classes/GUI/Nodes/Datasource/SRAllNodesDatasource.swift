@@ -23,6 +23,7 @@ public class SRAllNodesDatasource: NSObject, UITableViewDataSource, UITableViewD
 
     public func reload() {
         self.allNodes.removeAll(keepCapacity: true)
+        self.tableView.reloadData()
 
         Alamofire.request(.GET, kYourHubURLAddress)
             .responseJSON { (_, _, JSON, _) in
@@ -62,8 +63,8 @@ public class SRAllNodesDatasource: NSObject, UITableViewDataSource, UITableViewD
 
         let node = self.allNodes[indexPath.section] as SRSensorsNode
         let sensor = node.sensors[indexPath.row]
-        cell.textLabel?.text = sensor.humanReadableValue()
-        
+        cell.textLabel?.text = sensor.sensorName
+
         return cell
     }
 }

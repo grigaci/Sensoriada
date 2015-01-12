@@ -18,5 +18,6 @@ class SRSensorTableViewController: UITableViewController {
         super.viewDidLoad()
         self.datasource = SRSensorDatasource(self.tableView)
         self.datasource.sensor = self.sensor
+        self.title = self.sensor.sensorName
     }
 }

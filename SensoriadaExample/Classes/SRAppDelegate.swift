@@ -22,4 +22,3 @@ class SRAppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-

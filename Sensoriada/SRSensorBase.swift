@@ -19,6 +19,7 @@ public enum SRSensorBaseKeys: String {
 }
 
 public let kSRSensorBaseVersionDefault = "0.0.0"
+public let kSRSensorBaseNameDefault = "Unknown"
 
 public enum SRSensorBaseErrorDescription: String {
     case NotAvailable = "Not available"
@@ -38,10 +39,12 @@ public class SRSensorBase {
 
     public var type: SRSensorType
     public var version: String
+    public var sensorName: String
 
     public init(values: [String : AnyObject]) {
         self.type = .Unknown
         self.version = kSRSensorBaseVersionDefault
+        self.sensorName = kSRSensorBaseNameDefault
         self.parseRawValues(values)
     }
 

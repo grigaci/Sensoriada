@@ -10,9 +10,16 @@ public enum SRSensorTemperatureKeys: String {
     case value = "value"
 }
 
+let kSRSensorTemperatureNameDefault = "Temperature"
+
 public class SRSensorTemperature: SRSensorBase {
 
     public var temperature: Float!
+
+    public override init(values: [String : AnyObject]) {
+        super.init(values: values)
+        self.sensorName = kSRSensorTemperatureNameDefault
+    }
 
     public override func parseRawValues(values: [String : AnyObject]) {
         super.parseRawValues(values)
